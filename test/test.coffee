@@ -1,15 +1,15 @@
-# import { shallow } from 'vue-test-utils'
+import { shallow } from 'vue-test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 assert =  require('chai').assert
 
 describe 'HelloWorld.vue', ->
-  # it 'renders li for each item in props.items', ->
-  #   items = ['', '']
-  #   wrapper = shallow(List, {
-  #     propsData: { items }
-  #     })
-  #   expect(wrapper.findAll('li')).toHaveLength(items.length)
+  it 'renders li for each item in props.items', ->
+    items = ['', '']
+    wrapper = shallow(HelloWorld, {
+      propsData: { items }
+      })
+    assert.equal(wrapper.findAll('li').length,items.length)
 
   it "test props", ->
     assert.equal('HelloWorld', HelloWorld.name)
