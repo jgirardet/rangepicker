@@ -11,12 +11,13 @@
 </template>
 
 <script lang="coffee">
-export default {
+export default 
   name: 'HelloWorld'
   props:  ['items']
   data: ->
       msg: 'Welcome to Your Vue.js App'
-}
+      bla: "aie"
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
