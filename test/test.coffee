@@ -2,8 +2,6 @@ import { shallow, createLocalVue} from 'vue-test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 
-
-
 describe 'HelloWorld.vue', ->
   it 'renders li for each item in props.items', ->
     localVue = createLocalVue()
@@ -30,8 +28,7 @@ describe 'wraoer séparré', ->
     assert.equal wper.vm.$data.bla, "aie"
     assert wper.isVueInstance()
     assert wper.hasProp('bla', 'aie')
-
-
+    assert.equal HelloWorld.data().bla , wper.vm.$data.bla
 
 
   it "test props", ->
