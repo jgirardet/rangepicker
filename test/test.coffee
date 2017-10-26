@@ -1,9 +1,6 @@
 import { shallow, createLocalVue} from 'vue-test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
 
-test = require('unit.js');
-
-assert =  require('chai').assert
 
 
 
