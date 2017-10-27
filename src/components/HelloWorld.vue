@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    {{props}}
+    <h2>Essential Links </h2>
     <ul>
       <li v-for="item in items">
       {{ item }}
@@ -11,13 +12,37 @@
 </template>
 
 <script lang="coffee">
-export default 
+export default
   name: 'HelloWorld'
-  props:  ['items']
-  data: ->
-      msg: 'Welcome to Your Vue.js App'
-      bla: "aie"
+  props:
+    items:
+      type: Array
+      required: true
+      default: ->
+        ['rien','dispo']
+"""
+state:
+  # Initial state of ${1:your store}
 
+getters:
+  # Getters to access ${1:your store} values
+
+
+actions:
+  # Asynchronous mutations commits to modify ${1:your store}
+
+
+mutations:
+  # Synchronous modifications of ${1: your store}
+}
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations
+}
+"""
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
