@@ -8,7 +8,8 @@
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "test": "cross-env NODE_ENV=test mocha-webpack --watch  --webpack-config build/webpack.test.conf.js --require test/setup.js test/**/*.coffee"
+    "test": "cross-env NODE_ENV=test mocha-webpack",
+    "watch": "cross-env NODE_ENV=test mocha-webpack --watch"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -48,7 +49,6 @@
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
-    "unit.js": "^2.0.0",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",

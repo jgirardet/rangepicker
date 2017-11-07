@@ -20,6 +20,8 @@ export default
       required: true
       default: ->
         ['rien','dispo']
+  data:  =>
+    bla: "aie"
 """
 state:
   # Initial state of ${1:your store}

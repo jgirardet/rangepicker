@@ -1,21 +1,11 @@
 # template
 
-> A Vue.js project
 
-## Build Setup
+## modified webpack template for wuejs  with coffescript support
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+* coffescript support and loader
+* mocha-webpack as test runner
+* chai.assert as global assert
+* tests un de tests
+* test/setup.js for gloabl test paramas
+* test/
