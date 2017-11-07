@@ -1,14 +1,14 @@
 <template>
-    <HelloWorld/>
+    <range-picker/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import RangePicker from './components/RangePicker.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    RangePicker
   }
 }
 </script>

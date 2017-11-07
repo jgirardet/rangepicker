@@ -12,6 +12,8 @@
     "watch": "cross-env NODE_ENV=test mocha-webpack --watch"
   },
   "dependencies": {
+    "node-sass": "^4.6.0",
+    "sass-loader": "^6.0.6",
     "vue": "^2.5.2",
     "webpack-node-externals": "^1.6.0"
   },
