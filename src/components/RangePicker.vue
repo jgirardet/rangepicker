@@ -7,17 +7,11 @@
             {{month.getName()}}
           </div>
 
-          <div class="ui  horizontal segments equal width">
-            <div class="segment">lun</div>
-            <div class="segment">mar</div>
-            <div class="segment">mer</div>
-            <div class="segment">jeu</div>
-            <div class="segment">ven</div>
-            <div class="segment">sam</div>
-            <div class="segment">dim</div>
+          <div class="ui horizontal segments equal width">
+            <div class="ui segment" v-for="jour in jours">{{jour}}</div>
           </div>
-          <div class="ui horizontal  segments  equal width" v-for="n in 5">
-            <div class="segment" v-for="n in 7" >{{n+5}}</div>
+          <div class="rangepicker_numbers ui horizontal segments  equal width">
+            <div class="ui  segment" v-for="day in month.getDays()" >{{day}}</div>
           </div>
 
         </div>
@@ -40,6 +34,7 @@ export default {
         2017
   data:  =>
     months: []
+    jours: ['lun', 'mar','mer','jeu','ven', 'sam','dim']
 
   mounted: ->
     @months = Month.createMonthsForYear(@year)
@@ -48,9 +43,12 @@ export default {
 </script>
 
 <style>
-.ui.horizontal.segments.equal.width > .segment {
-    flex-grow:1;
-    width:0;
+.ui.horizontal.segments.equal.width > .ui.segment {
+    flex-grow: 1;
+    color: reen;
+    /*padding: 0;*/
+    /*display: flex;*/
+    flex-wrap: wrap;
 }
 
 </style>
