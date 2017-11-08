@@ -1,23 +1,23 @@
 <template>
-  <div class="rangepicker ui container">
-    <div class="ui four column grid centered">
-      <div class="rangepicker_month ui  centered aligned blue column" v-for="month in months">
-        <div class="ui segments">
-          <div class="rangepicker_monthtitle  segment ui large header">
-            {{month.getName()}}
+  <div class="rangepicker ui two column relaxed   grid container">
+      <div class="rangepicker_month ui   column" v-for="month in months">
+        <div class="ui centered  grid">
+          <div class="rangepicker_monthtitle   ui    row ">
+            <h2 class="ui inverted red header">{{month.getName()}}</h2>
           </div>
 
-          <div class="ui horizontal segments equal width">
-            <div class="ui segment" v-for="jour in jours">{{jour}}</div>
+          <div class="ui seven column equal width grey  row" id="listejour">
+            <div class="ui column" v-for="jour in jours">{{jour}}</div>
           </div>
-          <div class="rangepicker_numbers ui horizontal segments  equal width">
-            <div class="ui  segment" v-for="day in month.getDays()" >{{day}}</div>
+          <div class="rangepicker_numbers ui seven column equal width blue  row" >
+            <div class="ui  centered  column"  v-for="day in month.getDays()" >
+              <span :class="typeDeJour(day,month)">{{day.getDate()}}</span>
+            </div>
           </div>
+
 
         </div>
       </div>
-    </div>
-
   </div>
 </template>
 
@@ -36,6 +36,12 @@ export default {
     months: []
     jours: ['lun', 'mar','mer','jeu','ven', 'sam','dim']
 
+  methods:
+    typeDeJour: (day, month) ->
+      if day.getMonth() != month.month
+        ["pasmois"]
+
+
   mounted: ->
     @months = Month.createMonthsForYear(@year)
 
@@ -43,12 +49,15 @@ export default {
 </script>
 
 <style>
-.ui.horizontal.segments.equal.width > .ui.segment {
-    flex-grow: 1;
-    color: reen;
-    /*padding: 0;*/
-    /*display: flex;*/
-    flex-wrap: wrap;
+#listejour {
+    flex-wrap: nowrap;
+}
+#listejour > .ui.column {
+  text-transform: capitalize;
+  text-align: left;
 }
 
+.pasmois {
+  color: red;
+}
 </style>
