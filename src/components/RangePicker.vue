@@ -32,9 +32,13 @@ export default {
       required: false
       default: ->
         2017
+    'value':
+      type: Array
+
   data:  =>
     months: []
     jours: ['lun', 'mar','mer','jeu','ven', 'sam','dim']
+    ranges: []
 
   methods:
     typeDeJour: (day, month) ->
