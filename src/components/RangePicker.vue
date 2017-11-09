@@ -24,6 +24,7 @@
 <script lang="coffee">
 
 import Month from './Month.coffee'
+import Ranges from './Ranges.coffee'
 
 export default {
   props:
@@ -48,6 +49,8 @@ export default {
 
   mounted: ->
     @months = Month.createMonthsForYear(@year)
+    @ranges = Ranges.fromTimeStamps(@value)
+
 
 }
 </script>
