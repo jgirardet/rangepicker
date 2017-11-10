@@ -43,8 +43,12 @@ export default {
 
   methods:
     typeDeJour: (day, month) ->
+      a = []
       if day.getMonth() != month.month
-        ["pasmois"]
+        a.push("pasmois")
+      if @ranges.dayInRange(day)
+        a.push("dansRange")
+      a
 
 
   mounted: ->
@@ -66,5 +70,8 @@ export default {
 
 .pasmois {
   color: red;
+}
+.dansRange {
+  color: green;
 }
 </style>

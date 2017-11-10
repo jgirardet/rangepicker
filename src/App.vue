@@ -10,7 +10,7 @@ export default {
   components:
     "range-picker": RangePicker
   data:  =>
-    ranges: [[1510245058399, 1510504353483], [1510754353483, 1511004353483]]
+    ranges: [[1510182000000, 1510504353483], [1510700400000, 1511004353483]]
 
 }
 </script>
